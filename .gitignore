@@ -1,0 +1,45 @@
+# ===========================
+# Alles ignorieren, dann nur Website-Dateien whitelisten
+# ===========================
+
+# Alles ignorieren
+*
+
+# Ordnerstruktur erlauben
+!*/
+
+# ---------------------------
+# Website-Dateien whitelisten
+# ---------------------------
+
+# HTML
+!index.html
+!presentation.html
+!webinar.html
+
+# CSS
+!index.css
+!presentation.css
+!webinar.css
+
+# JavaScript
+!script.js
+!presentation.js
+
+# Assets (Bilder & Fonts)
+!assets/**
+
+# Diese Datei selbst
+!.gitignore
+
+# ---------------------------
+# Explizit ignorieren (Entwicklungs- & Referenzmaterial)
+# ---------------------------
+Bechtle Icons/
+Bechtle Logo/
+Bilddatenbank/
+Brand Guide/
+Trend Micro Logo/
+context.md
+*.md
+*.bak
