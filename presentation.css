@@ -501,24 +501,24 @@ ul.checklist li::before {
     }
 }
 
-/* Slido Interaction */
-/* Slido Interaction */
-.slido-code {
+/* Pollwave Interaction */
+/* Pollwave Interaction */
+.pollwave-code {
     font-size: 3.5rem;
     font-weight: bold;
     color: var(--progressive-green);
     margin: 0.5rem 0;
 }
 
-/* Legacy class kept for compatibility if needed, but new layout uses .slido-qr */
+/* Legacy class kept for compatibility if needed, but new layout uses .pollwave-qr */
 .qr-code-img {
     max-width: 300px;
     border-radius: var(--border-radius);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Full-Screen Slido Layout */
-.slido-content-wrapper {
+/* Full-Screen Pollwave Layout */
+.pollwave-content-wrapper {
     width: 95%;
     max-width: 95vw;
     /* Allow full width */
@@ -532,18 +532,38 @@ ul.checklist li::before {
     transition: all 0.8s ease-out;
 }
 
-.slide.active .slido-content-wrapper {
+.slide.active .pollwave-content-wrapper {
     opacity: 1;
     transform: translateY(0);
 }
 
-.slido-content-wrapper h2 {
+.pollwave-content-wrapper h2 {
     margin-bottom: 1.5rem;
     flex-shrink: 0;
     /* Prevent header from shrinking */
 }
 
-.slido-layout {
+/* Pollwave Embed - fills remaining slide space */
+.pollwave-embed {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    background: var(--white);
+}
+
+.pollwave-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.pollwave-layout {
     display: flex;
     flex: 1;
     /* Fill remaining height */
@@ -552,7 +572,7 @@ ul.checklist li::before {
     /* Prevent scrolling within the slide */
 }
 
-.slido-sidebar {
+.pollwave-sidebar {
     width: 300px;
     /* Fixed width sidebar */
     flex-shrink: 0;
@@ -567,24 +587,24 @@ ul.checklist li::before {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
-.slido-join-info {
+.pollwave-join-info {
     margin-bottom: 2rem;
 }
 
-.slido-url {
+.pollwave-url {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: var(--dark-grey);
 }
 
-.slido-qr {
+.pollwave-qr {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.slido-main {
+.pollwave-main {
     flex: 1;
     /* Take remaining width */
     background: var(--white);
@@ -594,7 +614,7 @@ ul.checklist li::before {
     position: relative;
 }
 
-.slido-main iframe {
+.pollwave-main iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -1151,7 +1171,6 @@ ul.checklist li::before {
     *::after {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
-        color-adjust: exact !important;
     }
 
     /* Use landscape A4 pages */
@@ -1193,7 +1212,7 @@ ul.checklist li::before {
 
     /* Force all content visible (override JS-driven animations) */
     .content-wrapper,
-    .slido-content-wrapper,
+    .pollwave-content-wrapper,
     .contact-cta {
         opacity: 1 !important;
         transform: none !important;
@@ -1226,12 +1245,12 @@ ul.checklist li::before {
         display: none !important;
     }
 
-    /* Hide Slido iframe (won't render in PDF anyway) */
-    .slido-main iframe {
+    /* Hide Pollwave iframe (won't render in PDF anyway) */
+    .pollwave-main iframe {
         display: none !important;
     }
 
-    .slido-main::after {
+    .pollwave-main::after {
         content: '[ Live-Ergebnisse werden hier während des Webinars angezeigt ]';
         display: flex;
         align-items: center;

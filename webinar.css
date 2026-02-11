@@ -323,8 +323,8 @@ ul {
     background-color: #f9f9f9;
 }
 
-/* Slido */
-.slido-container {
+/* Pollwave */
+.pollwave-container {
     background: var(--white);
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -332,12 +332,12 @@ ul {
     margin: 2rem 0;
 }
 
-.slido-qr {
+.pollwave-qr {
     text-align: center;
     margin-top: 2rem;
 }
 
-.slido-qr img {
+.pollwave-qr img {
     max-width: 200px;
     margin: 0 auto;
 }
